@@ -1,0 +1,57 @@
+[{
+  "_id": {
+    "$oid": "643af3a856f562a01b6fcc6e"
+  },
+  "table_id": "T01",
+  "max_cap": 2,
+  "table_status": true
+},{
+  "_id": {
+    "$oid": "643af3a856f562a01b6fcc6f"
+  },
+  "table_id": "T02",
+  "max_cap": 2,
+  "table_status": false
+},{
+  "_id": {
+    "$oid": "643af3a856f562a01b6fcc70"
+  },
+  "table_id": "T03",
+  "max_cap": 2,
+  "table_status": true
+},{
+  "_id": {
+    "$oid": "643af3a856f562a01b6fcc71"
+  },
+  "table_id": "T04",
+  "max_cap": 2,
+  "table_status": false
+},{
+  "_id": {
+    "$oid": "643af3a856f562a01b6fcc72"
+  },
+  "table_id": "T05",
+  "max_cap": 4,
+  "table_status": false
+},{
+  "_id": {
+    "$oid": "643af3a856f562a01b6fcc73"
+  },
+  "table_id": "T06",
+  "max_cap": 4,
+  "table_status": false
+},{
+  "_id": {
+    "$oid": "643af3a856f562a01b6fcc74"
+  },
+  "table_id": "T07",
+  "max_cap": 4,
+  "table_status": false
+},{
+  "_id": {
+    "$oid": "643af3a856f562a01b6fcc75"
+  },
+  "table_id": "T08",
+  "max_cap": 4,
+  "table_status": false
+}]

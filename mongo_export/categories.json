@@ -1,0 +1,31 @@
+[{
+  "_id": {
+    "$oid": "643a2e9eb21842fa0f3292c4"
+  },
+  "cate_name": "Burger",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643a2e9eb21842fa0f3292c5"
+  },
+  "cate_name": "Combo",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643a2e9eb21842fa0f3292c6"
+  },
+  "cate_name": "Gà Rán",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643a2e9eb21842fa0f3292c7"
+  },
+  "cate_name": "Món Ăn Kèm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643a2e9eb21842fa0f3292c8"
+  },
+  "cate_name": "Thức Uống",
+  "__v": 0
+}]

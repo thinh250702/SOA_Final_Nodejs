@@ -1,0 +1,127 @@
+[{
+  "_id": {
+    "$oid": "643c63d61a0b4bd51e3df587"
+  },
+  "order": {
+    "$oid": "643c63d61a0b4bd51e3df583"
+  },
+  "dish": {
+    "$oid": "643a2e9eb21842fa0f3292c9"
+  },
+  "order_dish_status": "Waiting",
+  "order_dish_qty": 1,
+  "order_dish_total": 59000,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643c63d61a0b4bd51e3df588"
+  },
+  "order": {
+    "$oid": "643c63d61a0b4bd51e3df583"
+  },
+  "dish": {
+    "$oid": "643a2e9eb21842fa0f3292ca"
+  },
+  "order_dish_status": "Waiting",
+  "order_dish_qty": 1,
+  "order_dish_total": 99000,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643c63d61a0b4bd51e3df589"
+  },
+  "order": {
+    "$oid": "643c63d61a0b4bd51e3df583"
+  },
+  "dish": {
+    "$oid": "643a32a12701f1c717c7bfef"
+  },
+  "order_dish_status": "Waiting",
+  "order_dish_qty": 3,
+  "order_dish_total": 75000,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643c6c29b51ac3c0f4ddc688"
+  },
+  "order": {
+    "$oid": "643c6c29b51ac3c0f4ddc684"
+  },
+  "dish": {
+    "$oid": "643a2e9eb21842fa0f3292c9"
+  },
+  "order_dish_status": "Waiting",
+  "order_dish_qty": 1,
+  "order_dish_total": 59000,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643c6c29b51ac3c0f4ddc689"
+  },
+  "order": {
+    "$oid": "643c6c29b51ac3c0f4ddc684"
+  },
+  "dish": {
+    "$oid": "643a2e9eb21842fa0f3292ca"
+  },
+  "order_dish_status": "Waiting",
+  "order_dish_qty": 1,
+  "order_dish_total": 99000,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643c6c29b51ac3c0f4ddc68a"
+  },
+  "order": {
+    "$oid": "643c6c29b51ac3c0f4ddc684"
+  },
+  "dish": {
+    "$oid": "643a2f9f11bf2664e88e5400"
+  },
+  "order_dish_status": "Waiting",
+  "order_dish_qty": 3,
+  "order_dish_total": 207000,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643c6c29b51ac3c0f4ddc68b"
+  },
+  "order": {
+    "$oid": "643c6c29b51ac3c0f4ddc684"
+  },
+  "dish": {
+    "$oid": "643a32a12701f1c717c7bfef"
+  },
+  "order_dish_status": "Waiting",
+  "order_dish_qty": 3,
+  "order_dish_total": 75000,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643c6f05122e628137471df3"
+  },
+  "order": {
+    "$oid": "643c6f05122e628137471def"
+  },
+  "dish": {
+    "$oid": "643a32a12701f1c717c7bfed"
+  },
+  "order_dish_status": "Waiting",
+  "order_dish_qty": 3,
+  "order_dish_total": 102000,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643c6f05122e628137471df4"
+  },
+  "order": {
+    "$oid": "643c6f05122e628137471def"
+  },
+  "dish": {
+    "$oid": "643a32a12701f1c717c7bfee"
+  },
+  "order_dish_status": "Waiting",
+  "order_dish_qty": 2,
+  "order_dish_total": 44000,
+  "__v": 0
+}]

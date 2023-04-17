@@ -1,0 +1,196 @@
+[{
+  "_id": {
+    "$oid": "643a2e9eb21842fa0f3292c9"
+  },
+  "dish_name": "Burger cá hồi xông khói",
+  "dish_dsc": "Burger cá hồi xông khói",
+  "dish_img": "https://burgerking.vn/media/catalog/product/cache/1/small_image/1000x/9df78eab33525d08d6e5fb8d27136e95/b/u/burger-salmon_new__1.jpg",
+  "unit_price": 59000,
+  "dish_status": true,
+  "category": {
+    "$oid": "643a2e9eb21842fa0f3292c4"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643a2e9eb21842fa0f3292ca"
+  },
+  "dish_name": "Burger 2 miếng cá hồi xông khói",
+  "dish_dsc": "Burger 2 miếng cá hồi xông khói phô mai",
+  "dish_img": "https://burgerking.vn/media/catalog/product/cache/1/small_image/1000x/9df78eab33525d08d6e5fb8d27136e95/d/e/deluxe_salmon_burger_new__1.jpg",
+  "unit_price": 99000,
+  "dish_status": true,
+  "category": {
+    "$oid": "643a2e9eb21842fa0f3292c4"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643a2e9eb21842fa0f3292cb"
+  },
+  "dish_name": "Burger bò nướng whopper jr",
+  "dish_dsc": "Burger bò nướng whopper jr",
+  "dish_img": "https://burgerking.vn/media/catalog/product/cache/1/small_image/1000x/9df78eab33525d08d6e5fb8d27136e95/7/-/7-burger-b_-n_ng-whopper-jr_1.jpg",
+  "unit_price": 51000,
+  "dish_status": true,
+  "category": {
+    "$oid": "643a2e9eb21842fa0f3292c4"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643a2f9f11bf2664e88e53ff"
+  },
+  "dish_name": "Combo cheese lover",
+  "dish_dsc": "Burger Cá + Phô mai lát + 1 Khoai tây chiên (S) + 1 Nước ngọt",
+  "dish_img": "https://burgerking.vn/media/catalog/product/cache/1/small_image/1000x/9df78eab33525d08d6e5fb8d27136e95/c/b/cb_cheese_lover.jpeg",
+  "unit_price": 59000,
+  "dish_status": true,
+  "category": {
+    "$oid": "643a2e9eb21842fa0f3292c5"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643a2f9f11bf2664e88e5400"
+  },
+  "dish_name": "Combo bacon lover",
+  "dish_dsc": "Burger Bò Phô Mai + 4 miếng Bò Thịt Heo Xông Khói + 1 Khoai tây chiên (S) + 1 Nước ngọt",
+  "dish_img": "https://burgerking.vn/media/catalog/product/cache/1/small_image/1000x/9df78eab33525d08d6e5fb8d27136e95/c/b/cb_bacon_lover.jpeg",
+  "unit_price": 69000,
+  "dish_status": true,
+  "category": {
+    "$oid": "643a2e9eb21842fa0f3292c5"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643a2f9f11bf2664e88e5401"
+  },
+  "dish_name": "Combo beef lover",
+  "dish_dsc": "Burger 2 miếng Bò Phô Mai + 1 Khoai tây chiên (S) + 1 Nước ngọt",
+  "dish_img": "https://burgerking.vn/media/catalog/product/cache/1/small_image/1000x/9df78eab33525d08d6e5fb8d27136e95/c/b/cb_beef_lover.jpeg",
+  "unit_price": 79000,
+  "dish_status": true,
+  "category": {
+    "$oid": "643a2e9eb21842fa0f3292c5"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643a32a12701f1c717c7bfe8"
+  },
+  "dish_name": "Gà rán giòn cay (1 miếng)",
+  "dish_dsc": "Gà rán giòn cay (1 miếng)",
+  "dish_img": "https://burgerking.vn/media/catalog/product/cache/1/small_image/316x/9df78eab33525d08d6e5fb8d27136e95/1/-/1-mieng-ga-gion-ko-cay.jpg",
+  "unit_price": 36000,
+  "dish_status": true,
+  "category": {
+    "$oid": "643a2e9eb21842fa0f3292c6"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643a32a12701f1c717c7bfe9"
+  },
+  "dish_name": "Gà bbq (1 miếng)",
+  "dish_dsc": "Gà bbq (1 miếng)",
+  "dish_img": "https://burgerking.vn/media/catalog/product/cache/1/small_image/316x/9df78eab33525d08d6e5fb8d27136e95/1/-/1-canh-ga-bbq.jpg",
+  "unit_price": 39000,
+  "dish_status": true,
+  "category": {
+    "$oid": "643a2e9eb21842fa0f3292c6"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643a32a12701f1c717c7bfea"
+  },
+  "dish_name": "Mix wing",
+  "dish_dsc": "Mix wing 4pcs",
+  "dish_img": "https://burgerking.vn/media/catalog/product/cache/1/small_image/316x/9df78eab33525d08d6e5fb8d27136e95/m/i/mix-wing-_4pcs__1.jpg",
+  "unit_price": 75000,
+  "dish_status": true,
+  "category": {
+    "$oid": "643a2e9eb21842fa0f3292c6"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643a32a12701f1c717c7bfeb"
+  },
+  "dish_name": "Gà cuộn rong biển 6pcs",
+  "dish_dsc": "Gà cuộn rong biển 6pcs",
+  "dish_img": "https://burgerking.vn/media/catalog/product/cache/1/small_image/316x/9df78eab33525d08d6e5fb8d27136e95/g/_/g_cu_n_rong_bi_n_4pcs_.jpg",
+  "unit_price": 66000,
+  "dish_status": true,
+  "category": {
+    "$oid": "643a2e9eb21842fa0f3292c7"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643a32a12701f1c717c7bfec"
+  },
+  "dish_name": "Khoai tây tắm phô mai",
+  "dish_dsc": "Khoai tây tắm phô mai",
+  "dish_img": "https://burgerking.vn/media/catalog/product/cache/1/small_image/316x/9df78eab33525d08d6e5fb8d27136e95/k/h/khoai-t_y-chi_n-t_m-ph_-mai.jpg",
+  "unit_price": 32000,
+  "dish_status": true,
+  "category": {
+    "$oid": "643a2e9eb21842fa0f3292c7"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643a32a12701f1c717c7bfed"
+  },
+  "dish_name": "Gà nuggets 4 pcs",
+  "dish_dsc": "Gà nuggets 4 pcs",
+  "dish_img": "https://burgerking.vn/media/catalog/product/cache/1/small_image/316x/9df78eab33525d08d6e5fb8d27136e95/g/_/g_-nuggets-_4pcs_.jpg",
+  "unit_price": 34000,
+  "dish_status": true,
+  "category": {
+    "$oid": "643a2e9eb21842fa0f3292c7"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643a32a12701f1c717c7bfee"
+  },
+  "dish_name": "Nước cam",
+  "dish_dsc": "Nước cam",
+  "dish_img": "https://burgerking.vn/media/catalog/product/cache/1/small_image/316x/9df78eab33525d08d6e5fb8d27136e95/m/i/minutemaid_1.jpg",
+  "unit_price": 22000,
+  "dish_status": true,
+  "category": {
+    "$oid": "643a2e9eb21842fa0f3292c8"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643a32a12701f1c717c7bfef"
+  },
+  "dish_name": "Milo",
+  "dish_dsc": "Milo",
+  "dish_img": "https://burgerking.vn/media/catalog/product/cache/1/small_image/316x/9df78eab33525d08d6e5fb8d27136e95/m/i/milo_2.jpg",
+  "unit_price": 25000,
+  "dish_status": true,
+  "category": {
+    "$oid": "643a2e9eb21842fa0f3292c8"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643a32a12701f1c717c7bff0"
+  },
+  "dish_name": "Trà chanh",
+  "dish_dsc": "Trà chanh",
+  "dish_img": "https://burgerking.vn/media/catalog/product/cache/1/small_image/316x/9df78eab33525d08d6e5fb8d27136e95/n/e/nesttea_1.jpg",
+  "unit_price": 22000,
+  "dish_status": true,
+  "category": {
+    "$oid": "643a2e9eb21842fa0f3292c8"
+  },
+  "__v": 0
+}]

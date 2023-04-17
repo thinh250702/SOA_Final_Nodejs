@@ -1,0 +1,17 @@
+[{
+  "_id": {
+    "$oid": "643a34f1a3f3231df3211010"
+  },
+  "emp_id": "70128082",
+  "emp_name": "Nguyen Truong Thinh",
+  "emp_role": "WAITER",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643a34f1a3f3231df3211011"
+  },
+  "emp_id": "53217502",
+  "emp_name": "Le Minh Triet",
+  "emp_role": "KITCHEN",
+  "__v": 0
+}]
