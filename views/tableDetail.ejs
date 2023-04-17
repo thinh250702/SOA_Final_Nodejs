@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Maison - Table Detail</title>
+    <%- include('partials/library.ejs'); %> 
+    <link rel='stylesheet' href='/stylesheets/style.css'>
+    <link rel='stylesheet' href='/stylesheets/shadow.css'>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="/images/logo.png" alt="">
+            </div>
+            <nav>
+                <a href=""><i class="fa-solid fa-table-cells-large"></i>TABLE LAYOUT</a>
+                <a href=""><i class="fa-solid fa-clipboard-list"></i>ORDER LIST</a>
+            </nav>
+        </div>
+        <div class="main">
+            <div class="header">
+                <i class="fa-solid fa-user"></i>
+                <p><%= current %></p>
+                <a href="/logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+            </div>
+            <div class="content">
+                <div class="table_detail_container">
+                    <div class="table_wrapper">
+                        <div class="shadow-4">
+                            <div class="table_section_header">
+                                <span>TABLE <%= table.table_id %></span>
+                                <span>PAX: <%= table.max_cap %></span>
+                            </div>
+                            <div class="table_section_body">
+                                <div class="table_section_item">
+                                    <span>Bill Status: </span>
+                                    <% if (invoice.invoice_status == false){ %>
+                                        <span>Not Paid</span>
+                                    <% } else { %>
+                                        <span>Paid</span>
+                                    <% } %>
+                                    
+                                </div>
+                                <div class="table_section_item">
+                                    <span>Arrive Time: </span>
+                                    <span>20/03/2023 11:30:55</span>
+                                </div>
+                                <div class="table_section_item">
+                                    <span>Bill Amount: </span>
+                                    <span><%= invoice.pay_amount %></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order_wrapper">
+                        <div class="order_section_header">
+                            <span>Order List</span>
+                            <a href="/menu/<%= table.table_id %>">Add New Order</a>
+                        </div>
+                        <div class="order_section_body">
+                            <div class="main_header">
+                                <span>Sản phẩm</span>
+                                <span>Đơn giá</span>
+                                <span>Số lượng</span>
+                                <span>Trạng thái</span>
+                            </div>
+                            <% order_lst.forEach(order_item => { %>
+                                <div class="order_row shadow-4">
+                                    <div class="order_row_header">
+                                        <span>ID:</span>
+                                        <span><%= order_item._id %></span>
+                                    </div>
+                                    <div class="order_row_body">
+                                        <% item_lst.forEach(item => {
+                                            if (item.order.equals(order_item._id)) { %>
+                                                <div class="order_row_item">
+                                                    <span><%= item.dish.dish_name %></span>
+                                                    <span><%= item.order_dish_qty %></span>
+                                                    <span><%= item.order_dish_total %></span>
+                                                    <span><%= item.order_dish_status %></span>
+                                                </div>
+                                            <% }
+                                        }) %>
+                                    </div>
+                                    <div class="order_row_total">
+                                        <span>Total:</span>
+                                        <span><%= order_item.order_total %></span>
+                                    </div>
+                                </div>
+                            <% }) %>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <a class="back" href="/table">BACK</a>
+                <button class="pay_order">Pay Order</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

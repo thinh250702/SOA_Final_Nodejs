@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>La Maison - Table Layout</title>
+	<%- include('partials/library.ejs'); %> 
+    <link rel='stylesheet' href='/stylesheets/style.css'>
+</head>
+<body>
+	<div class="message free_msg">
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <h1>Confirm</h1>
+        <p>Are you sure want to open <strong>Table T-01</strong>?</p>
+        <div>
+            <a href="" id="yes">Yes, Open it</a>
+            <button id="cancel">Cancel</button>
+        </div>
+    </div>
+    <div class="message occupied_msg">
+        <h1>Table T-01</h1>
+        <button id="view">View ORDER</button>
+        <button id="edit">Edit ORDER</button>
+        <button id="move">Move TABLE</button>
+    </div>
+    <div id="overlay"></div>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="images/logo.png" alt="">
+            </div>
+            <nav>
+                <a href=""><i class="fa-solid fa-table-cells-large"></i>TABLE LAYOUT</a>
+                <a href=""><i class="fa-solid fa-clipboard-list"></i>ORDER LIST</a>
+            </nav>
+        </div>
+        <div class="main">
+            <div class="header">
+                <i class="fa-solid fa-user"></i>
+                <p><%= current %></p>
+                <a href="/logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+            </div>
+            <div class="content">
+                <div class="table_container">
+					<% table_lst.forEach((table) => {
+						if (table.table_status == 0) { %>
+							<div id="<%= table.table_id %>" class="table free">
+								<div class="table_header">
+									<p class="table_name"><%= table.table_id %></p>
+									<div class="table_pax_ctn">
+										<i class="fa-solid fa-user"></i>
+										<p class="table_pax"><%= table.max_cap %></p>
+									</div>
+								</div>
+								<div class="table_status">Free</div>
+								<div class="table_footer">
+									<div class="arrive_time_ctn">
+										<i class="fa-solid fa-clock"></i>
+										<p class="arrive_time"></p>
+									</div>
+									<button><i class="fa-solid fa-gear"></i></button>
+								</div>
+							</div> 
+						<% }else { %>
+							<div id="<%= table.table_id %>" class="table">
+								<div class="table_header">
+									<p class="table_name"><%= table.table_id %></p>
+									<div class="table_pax_ctn">
+										<i class="fa-solid fa-user"></i>
+										<p class="table_pax"><%= table.max_cap %></p>
+									</div>
+								</div>
+								<div class="table_status">Occupied</div>
+								<div class="table_footer">
+									<div class="arrive_time_ctn">
+										<i class="fa-solid fa-clock"></i>
+										<p class="arrive_time">12:00</p>
+									</div>
+									<button><i class="fa-solid fa-gear"></i></button>
+								</div>
+							</div>  
+						<% }
+					}) %>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+	$(document).ready(function(){
+		$(".table").click(function() {
+			var openID = $(this).attr("id");
+			if ($(this).hasClass("free")) {
+				$(".message.free_msg").addClass("active");
+				$("#overlay").addClass("active");
+				$(".message.free_msg strong").text("Table " + openID);
+				$(".message.free_msg a").attr("href", "/menu/" + openID.toLowerCase());
+				$("a#yes").click(function() {
+					$.ajax({
+						url: "/table/open",
+						type: "POST",
+						data: {
+							'table_id': openID
+						},
+						// success: function(){
+						// 	console.log("Success");
+						// }
+					});
+				})
+				$("button#cancel").click(function() {
+					$("#overlay").removeClass("active");
+					$(".message").removeClass("active");
+				})
+			}
+			else {
+				$(".message.occupied_msg").addClass("active");
+				$("#overlay").addClass("active");
+				$(".message.occupied_msg h1").text("Table " + openID);
+				$("button#view").click(function() {
+					window.location.href = "/table/detail/" + openID.toLowerCase();
+				})
+				// $(".message.occupied_msg a#view").attr("href", "/" + openID.toLowerCase());
+			}
+		});
+
+		$("#overlay").click(function() {
+			$(this).removeClass("active");
+			$(".message").removeClass("active");
+		})
+	});
+</script>
+</html>

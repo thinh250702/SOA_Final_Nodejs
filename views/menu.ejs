@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Maison - Menu</title>
+    <%- include('partials/library.ejs'); %> 
+    <link rel='stylesheet' href='/stylesheets/style.css'>
+    <link rel='stylesheet' href='/stylesheets/shadow.css'>
+</head>
+<body>
+    <div class="container">
+        <div class="menu_sidebar">
+            <div class="logo">
+                <img src="/images/logo.png" alt="">
+            </div>
+            <h1>MENU</h1>
+            <div id="category">
+                <% cate_lst.forEach((item) => { %>
+                    <button id="<%= item.cate_name.toLowerCase().replace(/ +/g, '').normalize('NFD').replace(/[\u0300-\u036f]/g, '') %>" class="cate_item"><%= item.cate_name %></button>
+                <% }) %>
+            </div>
+        </div>
+        <div class="main">
+            <div class="order_detail shadow-4">
+                <form action="/order/<%= tableID %>" method="post">
+                    <!-- <input type="text" name="order_item_lst" id=""> -->
+                    <div class="order_list_content">
+                        <h1>Your Order</h1>
+                        <div class="order_food_list">
+                            <div class="list_header">
+                                <div>Sản phẩm</div>
+                                <div>Đơn giá</div>
+                                <div>Số lượng</div>
+                            </div>
+                            <div class="list_body">
+                                <% cart_lst.forEach((cartItem) => { %>
+                                    <div class="list_item">
+                                        <div><%= cartItem.dish.dish_name %></div>
+                                        <div><%= cartItem.dish.unit_price %></div>
+                                        <div class="order_qty_wrapper">
+                                            <span class="minus">-</span>
+                                            <span class="num"><%= cartItem.cart_dish_qty %></span>
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                <% }) %>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order_list_footer">
+                        <div class="order_total_price">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            cart_lst.forEach((cartItem) => {
+
+                            })
+                            1.000.000 VND
+                        </div>
+                        <input type="submit" value="Place Order">
+                    </div>
+                </form>
+            </div>
+            <div id="overlay" class=""></div>
+            <div class="header">
+                <i class="fa-solid fa-user"></i>
+                <p><%= current %></p>
+                <a href="/logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+            </div>
+            <div class="menu_content">
+                <div class="food_list">
+                    <% cate_lst.forEach((cateItem) => { %>
+                        <div id="<%= cateItem.cate_name.toLowerCase().replace(/ +/g, '').normalize('NFD').replace(/[\u0300-\u036f]/g, '') %>Wrapper" class="cate_wrapper">
+                        <% dish_lst.forEach((dishItem) => {
+                            if (dishItem.category.cate_name == cateItem.cate_name) { %>
+                                <div id="<%= dishItem._id %>_row" class="food_row shadow-4">
+                                    <img src="<%= dishItem.dish_img %>" alt="">
+                                    <div>
+                                        <p class="food_name"><%= dishItem.dish_name %></p>
+                                        <p class="food_dsc"><%= dishItem.dish_dsc %></p>
+                                        <p class="food_price"><%= dishItem.unit_price.toLocaleString('it-IT', {style : 'currency', currency : 'VND'}) %></p>
+                                    </div>
+                                </div>
+                            <% }
+                        }) %>
+                        </div>
+                    <% }) %>
+                </div>
+                <div class="food_detail">
+                    <% dish_lst.forEach((dishItem) => { %>
+                        <div id="<%= dishItem._id %>" class="food_detail_item">
+                            <div id="" class="food_info_wrapper">
+                                <img class="shadow-4" src="<%= dishItem.dish_img %>" alt="">
+                                <div class="food_info">
+                                    <h1 class="food_name"><%= dishItem.dish_name %></h1>
+                                    <div>
+                                        <span class="title">Price</span>
+                                        <span class="food_price"><%= dishItem.unit_price.toLocaleString('it-IT', {style : 'currency', currency : 'VND'}) %></span>
+                                    </div>
+                                    <div class="food_dsc">
+                                        <span class="title">Description</span> 
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    </div>
+                                    <div class="food_rate">
+                                        <span class="title">Rating</span>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="qty_wrapper">
+                                <span class="minus">-</span>
+                                <span class="num">01</span>
+                                <span class="plus">+</span>
+                            </div>
+                            <button id="" class="addToCart shadow-4">Add to Order</button>
+                        </div>
+                    <% }) %>
+                </div>
+            </div>
+            <div class="footer">
+                <a class="back" href="/table">BACK</a>
+                <p class="table_name">Table <%= tableID.toUpperCase() %></p>
+                <div id="divide">|</div>
+                <button class="order">
+                    <div class="cart_qty">5</div>
+                    <i class="fa-solid fa-cart-shopping"></i>ORDER
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function(){
+        var activeCate = "1";
+        var activeDish = "1";
+
+        $(".cate_item").click(function() {
+            activeCate = $(this).attr("id");
+            $(this).siblings().removeClass("active");
+            $(this).addClass("active");
+            var activeWrapper = ".cate_wrapper#" + activeCate + "Wrapper";
+            $(activeWrapper).siblings().removeClass("active");
+            $(activeWrapper).addClass("active");
+        });
+
+        $(".food_row").click(function() {
+            activeDish = $(this).attr("id").replace("_row","");
+            var selector = ".food_detail_item#" + activeDish;
+            $(selector).siblings().removeClass("active");
+            $(selector).addClass("active");
+            console.log(activeDish)
+        });
+
+        $(".order").click(function() {
+            $(".order_detail").addClass("active");
+            $("#overlay").addClass("active");
+        });
+
+        $("#overlay").click(function() {
+			$(this).removeClass("active");
+			$(".order_detail").removeClass("active");
+		});
+
+        // var a = $("#"+activeDish+" .num").text();
+        $(".plus").click(() => {
+            let a = parseInt($("#"+activeDish+" .num").text());
+            a++;
+            a = (a < 10) ? "0" + a : a;
+            $("#"+activeDish+" .num").text(a);
+            // console.log(a)
+        })
+        $(".minus").click(() => {
+            let a = parseInt($("#"+activeDish+" .num").text());
+            if (a > 1){
+                a--;
+                a = (a < 10) ? "0" + a : a;
+                $("#"+activeDish+" .num").text(a);
+            }
+        });
+        $("button.addToCart").click(() => {
+            console.log();
+            let table_id = $(".table_name").text().replace("Table ","");
+            $.ajax({
+                url: "/menu/" + table_id + "/addToCart",
+				type: "POST",
+                dataType: 'html',
+				data: {
+                    "dish": activeDish,
+                    "qty": parseInt($("#" + activeDish + " .num").text()),
+				},
+                success: function(data){
+                    $('.list_body').html(data);
+                }
+            });
+        })
+    })
+</script>
+</html>

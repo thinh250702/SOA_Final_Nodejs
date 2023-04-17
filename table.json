@@ -1,0 +1,42 @@
+[
+    {
+        "table_id": "T01",
+        "max_cap": 2,
+        "table_status": 0
+    },
+    {
+        "table_id": "T02",
+        "max_cap": 2,
+        "table_status": 0
+    },
+    {
+        "table_id": "T03",
+        "max_cap": 2,
+        "table_status": 0
+    },
+    {
+        "table_id": "T04",
+        "max_cap": 2,
+        "table_status": 0
+    },
+    {
+        "table_id": "T05",
+        "max_cap": 4,
+        "table_status": 0
+    },
+    {
+        "table_id": "T06",
+        "max_cap": 4,
+        "table_status": 0
+    },
+    {
+        "table_id": "T07",
+        "max_cap": 4,
+        "table_status": 0
+    },
+    {
+        "table_id": "T08",
+        "max_cap": 4,
+        "table_status": 0
+    }
+]
